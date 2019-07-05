@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Regex Tester</title>
+	<style type="text/css">
+	#div1{
+		margin-left: 30px
+
+}
+#div2{
+		margin-left: 30px
+
+}
+#regex{
+	border: 2px solid;
+	width: 700px;
+	height: 25px;
+}
+#strings{
+	border: 2px solid;
+	width: 700px;
+	height: 300px;
+	
+}
+h1{
+background-color: lightblue;
+text-align: center;
+
+}
+.container{
+	background-color: lightgrey;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<h1 >Regex Tester</h1>
+	<div id="div1">
+		<h3>Regular Expression</h3>
+		<hr>
+		<!-- <textarea  rows="2" 
+	cols="50"id="regex" placeholder="Insert your regular expression here..." ></textarea> -->
+	<input type="text" name="" id="regex" placeholder="Insert your regular expression here..."  oninput="onenter1()"  >
+	<!-- <button type="button" id="btn" onclick="onenter1()"> CLICK</button> -->
+	</div><br>
+	<hr>
+	<div id="div2">
+		<h3>Test String</h3>
+		<hr>
+		<textarea  rows="8" 
+	cols="50" id="strings" placeholder="Insert your text string here..."></textarea>
+	</div>
+</div>
+<script type="text/javascript">
+	//var reg=prompt("enter your regular expression",);
+	function onenter1(){
+	var str=document.getElementById('strings').value;
+	var rex=document.getElementById('regex').value;
+	var re=new RegExp(rex);
+	if (re.test(str) )
+	{
+		document.getElementById('strings').style.color="green";
+
+	}
+}
+
+
+</script>
+</body>
+</html>
